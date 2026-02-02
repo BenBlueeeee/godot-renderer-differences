@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm8np6vg3pkya"]
+[gd_scene load_steps=7 format=3 uid="uid://giydrsr5ukjh"]
 
-[ext_resource type="Shader" uid="uid://ine3lhoty1d" path="res://AlphaLightTest.gdshader" id="1_oydt1"]
+[ext_resource type="Shader" uid="uid://b1umor2ordxax" path="res://DiffuseLightTest.gdshader" id="1_aklde"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oydt1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -14,14 +14,14 @@ background_mode = 2
 sky = SubResource("Sky_ic04g")
 tonemap_mode = 2
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ic04g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a351"]
 render_priority = 0
-shader = ExtResource("1_oydt1")
+shader = ExtResource("1_aklde")
 
-[sub_resource type="BoxMesh" id="BoxMesh_hsjtk"]
-material = SubResource("ShaderMaterial_ic04g")
+[sub_resource type="BoxMesh" id="BoxMesh_38e07"]
+material = SubResource("ShaderMaterial_2a351")
 
-[node name="AlphaLightTest" type="Node3D"]
+[node name="DiffuseLightTest" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -34,4 +34,4 @@ environment = SubResource("Environment_hsjtk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0154053)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_hsjtk")
+mesh = SubResource("BoxMesh_38e07")
